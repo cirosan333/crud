@@ -1,0 +1,50 @@
+<div class="container" style="margin-top: 60px;">
+    <div class="row">
+        <div class="col text-right">
+            
+            <p class="text-right">
+                <h3>Bienvenido!</h3>
+                <a href="/admin/login/logout" class="btn btn-danger">Cerrar sesion <i class="fas fa-sign-out-alt"></i></a>
+            </p>
+
+            
+
+        </div>
+    </div>
+    {{!fin fila 1}}
+    {{!inicio fila 2}}
+    <div class="row">
+         <div class="col-7" style="margin-top: -9px ;">
+                  <h2>Listado de novedades</h2>
+         </div>    
+         <div class="col-5 text-right">
+                  <a href="" class="btn btn-success"> Nuevo <i class="fas fa-plus"></i></a>
+         </div>  
+    </div> 
+     
+     {{!inicio tabla}}
+       <table class="table" style="margin-top: 9px;">  
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Titulo</th>
+      <th scope="col" class="text-right">Acciones</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+       {{#each novedades}}
+    <tr>
+      <th scope="row">{{id}}</th>
+      <td>{{titulo}}</td>
+      <td class="text-right">
+          <a href="" class="btn btn-secondary"><i class="fas fa-pencil-alt"></i></a>
+          <a href="/admin/novedades/eliminar/{{id}}" class="btn btn-secondary"><i class="fas fa-trash"></i></a>
+      </td>
+      
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+</div>

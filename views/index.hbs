@@ -1,0 +1,199 @@
+<!-- -------------------------- Nav bar -------------------------- -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#home">Beer X</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" href="#novedades">Novedades</a>
+                        <a class="nav-link" href="#historia">Historia</a>
+                        <a class="nav-link" href="#nosotros">Nosotros</a>
+                        <a class="nav-link" href="#conocenos">Conocenos</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- -------------------------- Seccion hero -------------------------- -->
+        <div class="container-fluid">
+            <div id="home" class="row hero">
+                <div class="col-lg-3 offset-lg-1">
+                    <br>
+                    <br>
+                    <br>
+                    <p>Bajada</p>
+                    <h1>Titulo principal</h1>
+                    <p>Quod commodi mollitia explicabo esse eius alias voluptatum assumenda nemo?</p>
+                </div>
+            </div>
+        </div>
+        <!-- -------------------------- Seccion novedades -------------------------- -->
+        <div id="novedades" class="row py-4">
+            <div class="col-md-5 offset-md-2 py-4">
+                <h2>Novedades</h2>
+                <ul class="lista-novedades">
+                    {{#each novedades}}
+                    <li><a href="#" data-bs-toggle="modal" data-bs-target="#modal{{id}}"><img src="images/novedades01.jpg">{{titulo}}</a></li>
+                   {{/each}}
+                </ul>
+            </div>
+            <!--inicia modal-->
+            {{#each novedades}}
+             <div class="modal fade" tabindex="-1" id="modal{{id}}">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{titulo}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>{{cuerpo}}</p>
+      </div>
+      
+    </div>
+  </div>
+</div>
+{{/each}}
+
+            <div class="col-md-3">
+                <div class="rounded py-5 testimonios">
+                    <h2 class="text-center">Testimonios</h2>
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="testimonio">
+                                    <h5>La mejor birra del mundo!</h5>
+                                    <p>Francisco, Monte Grande</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="testimonio">
+                                    <h5>La mejor birra del mundo!</h5>
+                                    <p>Francisco, Monte Grande</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="testimonio">
+                                    <h5>La mejor birra del mundo!</h5>
+                                    <p>Francisco, Monte Grande</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- -------------------------- Seccion historia -------------------------- -->
+        <div class="container-fluid">
+			<div id="historia" class="row align-items-center">
+				<div class="col-lg-2 col-md-3 offset-lg-2 d-none d-sm-block">
+					<img src="images/historia_1.jpg" alt="Historia" class="img-fluid">
+				</div>
+				<div class="col-lg-2 col-md-3 d-none d-sm-block">
+					<img src="images/historia_2.jpg" alt="Historia" class="img-fluid">
+				</div>
+				<div class="col-lg-4 col-md-6 pt-5">
+					<h2>Historia</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				</div>
+			</div>
+		</div>
+        <div id="nosotros" class="row align-items-stretch my-3 py-4 staff">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="card-deck">
+                    <div class="card">
+                        <img src="images/nosotros01.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="images/nosotros02.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="images/nosotros03.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="images/nosotros04.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- -------------------------- conocenos -------------------------- -->
+        <div class="container-fluid">
+			<div id="conocenos" class="row py-4">
+				<div class="col-md-4 offset-md-2">
+					<h2>Visitanos</h2>
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.888517816292!2d-58.71773258417737!3d-34.657518267855025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbfeb5cc11bbf%3A0x66c6f05a9694801f!2sMedrano%20951%2C%20Merlo%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1622493965062!5m2!1ses-419!2sar" 
+							style="border:0;" allowfullscreen></iframe>
+					</div>
+				</div>
+				<div class="col-md-4 mt-4 mt-sm-0">
+					<h2>Contactanos</h2>
+					<form action="/" method="post">
+						
+							<div class="form-group">
+								<label for="inputEmail4">Email</label>
+								<input type="email" class="form-control" id="inputEmail4" name="email">
+							</div>
+
+                        <div class="form-group">
+							<label for="inputAddress">Telefono</label>
+							<input type="text" class="form-control" id="inputAddress" placeholder="" name="tel">
+						</div>
+							
+	
+						<div class="form-group">
+							<label for="inputAddress">Direccion</label>
+							<input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="direccion">
+						</div>
+						
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="inputCity">Ciudad</label>
+								<input type="text" class="form-control" id="inputCity" name="ciudad">
+							</div>
+							
+							<div class="form-group col-md-6">
+								<label for="inputZip">Codigo de area</label>
+								<input type="text" class="form-control" id="inputZip" name="codigo_area">
+							</div>
+						</div>
+						
+						<button type="submit" class="btn btn-primary">Enviar</button>
+					</form>
+                    {{message}}
+				</div>
+				<!-- cierra div conocenos -->   
+			</div>
+		</div>
+        <!-- cierra div fluid --> 
+        
+    </body>
+    <footer class="text-center">Diseñado por: Ciro Ionio 2021</footer>
